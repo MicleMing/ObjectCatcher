@@ -1,0 +1,29 @@
+{
+  "name": "ObjectExpress",
+  "version": "1.0.0",
+  "description": "display object",
+  "main": "index.js",
+  "author": "MicleMing <fzulanming@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "json-loader": "^0.5.7",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.0",
+    "webpack": "^4.17.2",
+    "webpack-command": "^0.4.1",
+    "webpack-dev-server": "^3.1.7",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {},
+  "scripts": {
+    "dev": "cd shells/chrome && webpack --watch"
+  }
+}
