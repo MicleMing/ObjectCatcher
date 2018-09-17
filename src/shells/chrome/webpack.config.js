@@ -1,5 +1,5 @@
 const path = require('path');
-const createConfig = require('../webpackHelper');
+const createConfig = require('./webpackHelper');
 
 module.exports = createConfig({
   entry: {

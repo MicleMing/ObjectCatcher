@@ -7,23 +7,22 @@ module.exports = (config, target = { chrome: 52, firefox: 48 }) => {
   const baseConfig = {
     resolve: {
       alias: {
-        src: path.resolve(__dirname, '../src'),
-        components: path.resolve(__dirname, '../src/devtools/components'),
+        app: path.resolve(__dirname, '../../devtools'),
       }
     },
     module: {
       rules: [
         {
           test: /\.jsx?$/,
-          include: [
-            path.resolve(__dirname)
-          ],
-          use: {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['react']
+              }
             }
-          }
+          ],
         },
         {
           test: /\.css$/,

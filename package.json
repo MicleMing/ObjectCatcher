@@ -7,23 +7,34 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
+    "env": "^0.0.2",
     "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.7",
     "raw-loader": "^0.5.1",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.22.1",
+    "style-loader": "^0.23.0",
     "url-loader": "^1.1.0",
     "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
     "webpack-command": "^0.4.1",
-    "webpack-dev-server": "^3.1.7",
+    "webpack-dev-server": "^3.1.8",
     "webpack-merge": "^4.1.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
   "scripts": {
-    "dev": "cd shells/chrome && webpack --watch"
+    "dev": "cd src/shells/chrome && webpack --watch --mode development",
+    "build": "cd src/shells/chrome && webpack --mode development"
   }
 }
