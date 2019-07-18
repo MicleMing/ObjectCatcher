@@ -6,8 +6,8 @@ import { render } from 'react-dom';
 import DevToolsAPP from './app';
 
 function initAPP(shell) {
-  shell.connect(() => {
-    render(<DevToolsAPP />, document.getElementById('devtools'));
+  shell.connect((data) => {
+    render(<DevToolsAPP data={data} />, document.getElementById('devtools'));
   })
 }
 

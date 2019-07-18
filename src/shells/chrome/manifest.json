@@ -16,7 +16,17 @@
     "default_title": "catcher",
     "default_popup": "popup.html"
   },
-  "content_scripts": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
   "permissions": [
     "contextMenus",
     "tabs",
