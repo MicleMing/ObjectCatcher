@@ -5,7 +5,9 @@ const createConfig = require('./webpackHelper');
 module.exports = createConfig({
   entry: {
     devtools: './src/devtools.js',
-    background: './src/background.js'
+    background: './src/background.js',
+    content: './src/content.js',
+    inject: './src/inject.js'
   },
   output: {
     path: path.join(__dirname, 'build'),
@@ -17,7 +19,6 @@ module.exports = createConfig({
       { from: './devtools.html', to: './' },
       { from: './manifest.json', to: './' },
       { from: './icons', to: './icons' },
-      { from: './content.js', to: './' },
     ]),
   ],
   devtool: process.env.NODE_ENV !== 'production'

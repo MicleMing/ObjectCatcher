@@ -14,7 +14,7 @@ export default class DevToolsAPP extends Component {
   render() {
     return (
       <div>
-        aaaa- {this.state.phone}
+        my name is {this.state.phone.uri}
       </div>
     )
   }

@@ -19,12 +19,12 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "*://*/*"
       ],
       "js": [
         "content.js"
-      ]
+      ],
+      "all_frames": true
     }
   ],
   "permissions": [
@@ -34,11 +34,10 @@
     "webRequest",
     "webRequestBlocking",
     "storage",
-    "http://*/*",
-    "https://*/*"
+    "*://*/*"
   ],
   "web_accessible_resources": [
-    "js/inject.js"
+    "inject.js"
   ],
   "chrome_url_overrides": {},
   "devtools_page": "devtools.html"
